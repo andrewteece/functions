@@ -10,9 +10,17 @@ $colors: (primary, #4287f5), (secondary, #3a128a), (accent, #f59c42);
   }
 }
 
+@mixin color-combo($color) {
+  background: $color;
+  color: high-contrast($color);
+}
+
 @each $name, $color in $colors {
   .clr-#{$name} {
-    background: $color;
-    color: high-contrast($color);
+    @include color-combo($color);
   }
+}
+
+.call-to-action {
+  @include color-combo(limegreen);
 }

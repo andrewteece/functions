@@ -1,4 +1,5 @@
 @use 'sass:color';
+@use 'sass:meta';
 
 $colors: (primary, #4287f5), (secondary, #3a128a), (accent, #f59c42);
 
@@ -25,3 +26,5 @@ $colors: (primary, #4287f5), (secondary, #3a128a), (accent, #f59c42);
 .call-to-action {
   @include color-combo(limegreen);
 }
+
+@debug meta.type-of($colors);

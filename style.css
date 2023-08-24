@@ -1,3 +1,16 @@
+.clr-primary {
+  background: #4287f5;
+  color: black;
+}
 
+.clr-secondary {
+  background: #3a128a;
+  color: white;
+}
+
+.clr-accent {
+  background: #f59c42;
+  color: black;
+}
 
 /*# sourceMappingURL=style.css.map */

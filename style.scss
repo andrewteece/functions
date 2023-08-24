@@ -1,0 +1,18 @@
+@use 'sass:color';
+
+$colors: (primary, #4287f5), (secondary, #3a128a), (accent, #f59c42);
+
+@function high-contrast($color) {
+  @if (color.lightness($color) < 50) {
+    @return white;
+  } @else {
+    @return black;
+  }
+}
+
+@each $name, $color in $colors {
+  .clr-#{$name} {
+    background: $color;
+    color: high-contrast($color);
+  }
+}
